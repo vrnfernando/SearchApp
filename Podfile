@@ -6,6 +6,8 @@ target 'SearchApp' do
   use_frameworks!
 
   # Pods for SearchApp
+  pod 'Alamofire'
+  pod 'AlamofireObjectMapper', '~> 5.0'
 
   target 'SearchAppTests' do
     inherit! :search_paths
