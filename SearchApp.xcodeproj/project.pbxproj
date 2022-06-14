@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7A710372B3DCCDB0996C89E3 /* Pods_SearchApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B882AA77909CA4EFFA8A61 /* Pods_SearchApp.framework */; };
+		95C8380E28589E7C005E9072 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C8380D28589E7C005E9072 /* NewViewController.swift */; };
+		95C838112858A63E005E9072 /* imageExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C838102858A63E005E9072 /* imageExtention.swift */; };
 		95C90B412855F29A003338B1 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C90B3F2855F29A003338B1 /* MovieTableViewCell.swift */; };
 		95C90B422855F29A003338B1 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95C90B402855F29A003338B1 /* MovieTableViewCell.xib */; };
 		95C90B452855F636003338B1 /* RestClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C90B442855F636003338B1 /* RestClientError.swift */; };
@@ -50,6 +52,8 @@
 		34F782923519FC378D6DDFC7 /* Pods-SearchApp-SearchAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchApp-SearchAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-SearchApp-SearchAppUITests/Pods-SearchApp-SearchAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6379B111D5A26613D821DD33 /* Pods_SearchAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71F77C9CF71B1E02CD1D8F0B /* Pods-SearchApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchApp.debug.xcconfig"; path = "Target Support Files/Pods-SearchApp/Pods-SearchApp.debug.xcconfig"; sourceTree = "<group>"; };
+		95C8380D28589E7C005E9072 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
+		95C838102858A63E005E9072 /* imageExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageExtention.swift; sourceTree = "<group>"; };
 		95C90B3F2855F29A003338B1 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		95C90B402855F29A003338B1 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		95C90B442855F636003338B1 /* RestClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestClientError.swift; sourceTree = "<group>"; };
@@ -119,9 +123,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		95C8380F2858A629005E9072 /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				95C838102858A63E005E9072 /* imageExtention.swift */,
+			);
+			path = Extention;
+			sourceTree = "<group>";
+		};
 		95C90B3C2855F25C003338B1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				95C8380F2858A629005E9072 /* Extention */,
 				95C90B3E2855F27F003338B1 /* Cell */,
 			);
 			path = View;
@@ -208,6 +221,7 @@
 				C53B33952855DDBA00589719 /* AppDelegate.swift */,
 				C53B33972855DDBA00589719 /* SceneDelegate.swift */,
 				C53B33992855DDBA00589719 /* ViewController.swift */,
+				95C8380D28589E7C005E9072 /* NewViewController.swift */,
 				C53B339B2855DDBA00589719 /* Main.storyboard */,
 				C53B33A12855DDBC00589719 /* Assets.xcassets */,
 				C53B33A32855DDBC00589719 /* LaunchScreen.storyboard */,
@@ -478,6 +492,7 @@
 				95C90B412855F29A003338B1 /* MovieTableViewCell.swift in Sources */,
 				C53B339A2855DDBA00589719 /* ViewController.swift in Sources */,
 				C53B33A02855DDBA00589719 /* SearchApp.xcdatamodeld in Sources */,
+				95C8380E28589E7C005E9072 /* NewViewController.swift in Sources */,
 				95C90B452855F636003338B1 /* RestClientError.swift in Sources */,
 				95C90B492855F6EE003338B1 /* HTTPResponse.swift in Sources */,
 				C53B33962855DDBA00589719 /* AppDelegate.swift in Sources */,
@@ -486,6 +501,7 @@
 				95C90B472855F6A5003338B1 /* SwiftyJSON.swift in Sources */,
 				95C90B502855F952003338B1 /* Movie.swift in Sources */,
 				C53B33982855DDBA00589719 /* SceneDelegate.swift in Sources */,
+				95C838112858A63E005E9072 /* imageExtention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

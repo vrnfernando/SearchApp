@@ -32,7 +32,7 @@ class HTTPService: NSObject {
     var headers         : HTTPHeaders
     var timeoutInterval : Double = 20
     var APIKey          : NSString?
-    var images = NSCache<NSString, NSData>()
+    static var images = NSCache<NSString, NSData>()
     let session: URLSession
     
     init(baseUrl: NSString! = "https://www.omdbapi.com") {
@@ -89,7 +89,7 @@ class HTTPService: NSObject {
     }
     
     func download(imageURL: URL, completion: @escaping (Data?, Error?) -> (Void)) {
-        if let imageData = images.object(forKey: imageURL.absoluteString as NSString) {
+        if let imageData = HTTPService.images.object(forKey: imageURL.absoluteString as NSString) {
             print("using cached images")
             completion(imageData as Data, nil)
             return
@@ -113,7 +113,7 @@ class HTTPService: NSObject {
             
             do {
                 let data = try Data(contentsOf: localUrl)
-                self.images.setObject(data as NSData, forKey: imageURL.absoluteString as NSString)
+                HTTPService.images.setObject(data as NSData, forKey: imageURL.absoluteString as NSString)
                 completion(data, nil)
             } catch let error {
                 completion(nil, error)

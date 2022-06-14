@@ -73,6 +73,22 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, UISearchBar
         print("")
     }
     
+    @objc func tapCell(_ sender:UITapGestureRecognizer){
+        
+        let location = sender.location(in: self.tableView)
+        let indexPath = self.tableView.indexPathForRow(at: location)
+        
+        let representedIdentifier = currentMovieList[indexPath!.row].imdbID
+        let poster = currentMovieList[indexPath!.row].poster
+        
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "NewViewController") as! NewViewController
+        nextViewController.representedIdentifier = representedIdentifier
+        nextViewController.img_url = poster
+        self.navigationController?.pushViewController(nextViewController, animated:false)
+        
+    }
+    
 }
 
 
@@ -118,13 +134,9 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
                 }
             }
         }
+        
+        cell!.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapCell(_:))))
         return cell!
     }
     
-    func image(data: Data?) -> UIImage? {
-        if let data = data {
-          return UIImage(data: data)
-        }
-        return UIImage(systemName: "picture")
-      }
 }
